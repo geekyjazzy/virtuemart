@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="library" method="upgrade" group="ingpsp" version="3.0">
+    <name>ING PSP - Library</name>
+    <creationDate>11/01/2017</creationDate>
+    <version>1.0.0</version>
+    <author>Ginger Payments</author>
+    <authorEmail>plugins@gingerpayments.com</authorEmail>
+    <authorUrl>https://www.gingerpayments.com</authorUrl>
+    <copyright>Copyright 2017 - Ginger Payments B.V.</copyright>
+    <license>The MIT License (MIT)</license>
+    <description>ING PSP Virtuemart payment methods library</description>
+    <libraryname>ingpsp</libraryname>
+    <files>
+        <filename>ingpsphelper.php</filename>
+        <folder>ing-php</folder>
+        <folder>language</folder>
+        <folder>Ingpsp</folder>
+    </files>
+    <languages folder="language">
+        <language tag="en-GB">en-GB/en-GB.lib_ingpsp.ini</language>
+        <language tag="nl-NL">nl-NL/nl-NL.lib_ingpsp.ini</language>
+        <language tag="de-DE">de-DE/de-DE.lib_ingpsp.ini</language>
+        <language tag="fr-FR">fr-FR/fr-FR.lib_ingpsp.ini</language>
+    </languages>
+</extension>

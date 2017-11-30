@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="package" version="2.5.0" method="upgrade">
+    <name>ING PSP - Virtuemart Package</name>
+    <description>ING PSP Viretuemart Package containing all available payment methods</description>
+    <packagename>ingpsp</packagename>
+    <author>Ginger Payments</author>
+    <packager>Ginger Payments</packager>
+    <creationDate>11/1/2017</creationDate>
+    <copyright>Copyright 2017 - Ginger Payments B.V.</copyright>
+    <license>The MIT License (MIT)</license>
+    <authorEmail>plugins@gingerpayments.com</authorEmail>
+    <authorUrl>https://www.gingerpayments.com</authorUrl>
+    <version>1.0.0</version>
+    <files folder="extensions">
+        <file id="ingpsp" type="library">ingpsp.zip</file>
+        <file id="ingpspbancontact" type="plugin" group="vmpayment">ingpspbancontact.zip</file>
+        <file id="ingpspbanktransfer" type="plugin" group="vmpayment">ingpspbanktransfer.zip</file>
+        <file id="ingpspcashondelivery" type="plugin" group="vmpayment">ingpspcashondelivery.zip</file>
+        <file id="ingpspcreditcard" type="plugin" group="vmpayment">ingpspcreditcard.zip</file>
+        <file id="ingpsphomepay" type="plugin" group="vmpayment">ingpsphomepay.zip</file>
+        <file id="ingpspideal" type="plugin" group="vmpayment">ingpspideal.zip</file>
+        <file id="ingpspklarna" type="plugin" group="vmpayment">ingpspklarna.zip</file>
+        <file id="ingpsppaypal" type="plugin" group="vmpayment">ingpsppaypal.zip</file>
+        <file id="ingpspsofort" type="plugin" group="vmpayment">ingpspsofort.zip</file>
+        <file id="ingpsppayconiq" type="plugin" group="vmpayment">ingpsppayconiq.zip</file>
+    </files>
+</extension>

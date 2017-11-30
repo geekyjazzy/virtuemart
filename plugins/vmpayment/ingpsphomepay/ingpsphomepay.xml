@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" version="3.0" method="upgrade" group="vmpayment">
+    <name>ING PSP - Homepay</name>
+    <creationDate>11/01/2017</creationDate>
+    <version>1.0.0</version>
+    <author>Ginger Payments</author>
+    <authorEmail>plugins@gingerpayments.com</authorEmail>
+    <authorUrl>https://www.gingerpayments.com</authorUrl>
+    <copyright>Copyright 2017 - Ginger Payments B.V.</copyright>
+    <license>The MIT License (MIT)</license>
+    <description>PLG_VMPAYMENT_INGPSPHOMEPAY_DESCRIPTION</description>
+    <files>
+        <filename plugin="ingpsphomepay">ingpsphomepay.php</filename>
+        <folder>language</folder>
+    </files>
+    <media folder="media" destination="../images/virtuemart/payment">
+	<filename>ingpsphomepay.png</filename>
+    </media>
+    <vmconfig>
+        <fields name="params">
+            <fieldset name="ingpsphomepay">
+                <field type="text" name="INGPSP_API_KEY" value="{$INGPSP_API_KEY}" default="" label="INGPSP_API_KEY_TITLE" description="INGPSP_API_KEY_EXPLAIN" />
+                <field name="INGPSP_LIB_PRODUCT" type="radio" default="" label="INGPSP_LIB_PRODUCT_TITLE" description="INGPSP_LIB_PRODUCT_EXPLAIN">
+                    <option value="kassacompleet">INGPSP_LIB_PRODUCT_KC</option>
+                    <option value="ingcheckout">INGPSP_LIB_PRODUCT_ING_CHECKOUT</option>
+                    <option value="epay">INGPSP_LIB_PRODUCT_ING_EPAY</option>
+                </field>
+                <field name="INGPSP_LIB_BUNDLE_CA_CERT" type="radio" default="1" label="INGPSP_LIB_BUNDLE_CA_CERT_TITLE" description="INGPSP_LIB_BUNDLE_CA_CERT_EXPLAIN">
+                    <option value="0">INGPSP_LIB_NO</option>
+                    <option value="1">INGPSP_LIB_YES</option>
+                </field> 
+                <field name="INGPSP_ALLOW_NOTIFICATIONS_FROM_X" type="radio" default="1" label="INGPSP_ALLOW_NOTIFICATIONS_FROM_X_TITLE" description="INGPSP_ALLOW_NOTIFICATIONS_FROM_X_EXPLAIN">
+                    <option value="0">INGPSP_LIB_NO</option>
+                    <option value="1">INGPSP_LIB_YES</option>
+                </field> 
+                <field name="INGPSP_STATUS_NEW" type="vmorderstate" scope="com_virtuemart" default="P" label="INGPSP_STATUS_NEW_TITLE" description="INGPSP_STATUS_NEW_EXPLAIN" />
+                <field name="INGPSP_STATUS_PROCESSING" type="vmorderstate" scope="com_virtuemart" default="P" label="INGPSP_STATUS_PROCESSING_TITLE" description="INGPSP_STATUS_PROCESSING_EXPLAIN" />
+                <field name="INGPSP_STATUS_ERROR"  type="vmorderstate" scope="com_virtuemart" default="X" label="INGPSP_STATUS_ERROR_TITLE" description="INGPSP_STATUS_ERROR_EXPLAIN" />
+                <field name="INGPSP_STATUS_COMPLETED" type="vmorderstate" scope="com_virtuemart" default="F" label="INGPSP_STATUS_COMPLETED_TITLE" description="INGPSP_STATUS_COMPLETED_EXPLAIN" />
+                <field name="INGPSP_STATUS_CANCELED"  type="vmorderstate" scope="com_virtuemart" default="X" label="INGPSP_STATUS_CANCELED_TITLE" description="INGPSP_STATUS_CANCELED_EXPLAIN" />
+                <field name="INGPSP_STATUS_EXPIRED"  type="vmorderstate" scope="com_virtuemart" default="X" label="INGPSP_STATUS_EXPIRED_TITLE" description="INGPSP_STATUS_EXPIRED_EXPLAIN" />
+                <field name="INGPSP_STATUS_CAPTURED"  type="vmorderstate" scope="com_virtuemart" default="S" label="INGPSP_STATUS_CAPTURED_TITLE" description="INGPSP_STATUS_CAPTURED_EXPLAIN" />
+                <field name="payment_logos" type="vmfiles" label="INGPSP_LOGOS_TITLE"
+                       description="INGPSP_LOGOS_TITLE_EXPLAIN"  multiple="true"
+                       directory="/images/virtuemart/payment"
+                       default="default" hide_default="1" hide_none="1"
+                       stripext="0" exclude="^_"/>
+            </fieldset>
+        </fields>
+    </vmconfig>
+</extension>
